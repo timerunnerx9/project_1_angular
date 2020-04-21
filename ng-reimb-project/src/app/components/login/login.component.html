@@ -1,0 +1,57 @@
+<!--     
+    <div align="center" id="login">
+    <h1 align = "center" id = "heading1">Reem System</h1>
+    <form (ngSubmit)="onSubmit()" #f1="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" 
+          placeholder="Username"
+          ngModel name="username"
+          required>
+        </div>
+        <div class="form-group">
+          <label for="userpassword">Password</label>
+          <input type="password" class="form-control" id="userpassword" 
+          placeholder="Password"
+          ngModel name="userpassword"
+          required>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+        <button type="submit" class="btn btn-primary"
+        [disabled]="!f1.valid">Login</button>
+      </form>
+      </div>
+
+    -->
+    <div class="bg">
+      <div align="center" id="login">
+      <h1 align = "center" id = "heading1">RE.EM System</h1>
+      <form (ngSubmit)="onSubmit()" #f1="ngForm">
+          <div class="form-group">
+            <label for="username"></label>
+            <input type="text" class="form-control" id="username" 
+            placeholder="Username"
+            ngModel name="username"
+            required>
+          </div>
+          <div class="form-group">
+            <label for="userpassword"></label>
+            <input type="password" class="form-control" id="userpassword" 
+            placeholder="Password"
+            ngModel name="userpassword"
+            required>
+          </div>
+          <div id= "errormessage" *ngIf="isError==true" class="form-group form-check">
+            <p class="form-check-label" >Incorrect username or password! Please try again!</p>
+          </div>
+          <button type="submit" class="btn btn-primary"
+          [disabled]="!f1.valid">Login</button>
+        </form>
+        </div>
+      </div>
+     
+  
+

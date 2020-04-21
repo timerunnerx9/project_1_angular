@@ -1,0 +1,21 @@
+#dropdownopt{
+
+    position: absolute;
+    margin-top: 2em;
+    right: 9vw;
+}
+
+.collapse{
+    position: relative;
+    left: 70vw;
+}
+button{
+    width: 10em;
+    margin-left: 1em;
+    position: relative;
+}
+
+#back{
+    background-color: gray;
+    width: 80px;
+}

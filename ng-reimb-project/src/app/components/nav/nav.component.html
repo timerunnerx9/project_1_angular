@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active">Reem</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/empreimb']" routerLinkActive="router-link-active" >Reimbursement</a>
+        </li>
+
+        <li class="nav-item"  *ngIf="role==='2'">
+          <a class="nav-link" [routerLink]="['/finreimb']" routerLinkActive="router-link-active">FinPendingReimb</a>
+        </li>
+        <li class="nav-item" *ngIf="role==='2'">
+          <a class="nav-link"   [routerLink]="['/fin2reimb']" routerLinkActive="router-link-active">FinAllReimb</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="onLogout()" routerLinkActive="router-link-active">Log out</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>

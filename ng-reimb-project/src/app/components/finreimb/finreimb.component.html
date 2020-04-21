@@ -1,0 +1,62 @@
+    <title>Reimbursement</title>
+    <h3> Reimbursement History [Manager View]</h3>
+    <button (click)="onBack()"type="button" class="btn btn-primary" id="back">Back</button>
+
+
+    <table class="table" >
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Author ID</th>
+          <th scope="col">Submitted Time</th>
+          <th scope="col" width = "18%" >Description</th>
+          <th scope="col">Receipt</th>
+          <th scope="col">Status</th>
+          <th scope="col">Resolver ID</th>
+          <th scope="col">Resolved Time</th>
+        </tr>
+      </thead>
+      <tbody  *ngFor ="let reimb of reimbrecords; let i = index" >
+        <tr>
+        <th scope="row">{{reimb.reimb_id}}</th>
+        <td>{{reimb.reimb_type_id}}</td>
+        <td>{{reimb.reimb_amount}}</td>
+        <td>{{reimb.reimb_author}}</td>
+        <td>{{reimb.reimb_submitted}}</td>
+        <td>{{reimb.reimb_description}}</td>
+        <td>{{reimb.reimb_receipt}}</td>
+        <td class = "hoverstatus" data-toggle = "collapse" (click)="toggle(reimb.reimb_id)"> 
+         {{reimb.reimb_status_id}}</td>
+        <td>{{reimb.reimb_resolver}}</td>
+        <td>{{reimb.reimb_resolved}}</td>
+      </tr>
+      <tr >
+      <!-- <p class ="collapse" [attr.id] = "'record-'+i"> -->
+      <p class ="collapse" [attr.id] = 'reimb.reimb_id'>
+    
+        <button class="btn btn-primary" type="button" (click) = "onApprove(reimb.reimb_id)" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Approve Request
+        </button>
+        <button class="btn btn-primary" type="button" (click) = "onReject(reimb.reimb_id)" aria-expanded="false" aria-controls="collapseExample">
+          Reject Request
+        </button>
+      </p >
+    </table>
+
+
+
+
+
+
+
+   
+
+ 
+  
+   
+
+
+
+  

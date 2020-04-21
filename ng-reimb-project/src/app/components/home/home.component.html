@@ -1,0 +1,57 @@
+<router-outlet></router-outlet>
+<app-nav></app-nav>
+<!-- <div>
+    <p>Hello {{user.username}}</p>
+    <p>{{user.user_id}}</p>
+    <p>{{user.password}}</p>
+    <p>{{user.firstname}}</p>
+    <p>{{user.lastname}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.role_id}}</p>
+</div> -->
+<body>
+    <!-- <div class="bg"></div> -->
+<div class="bg">
+ <div class="mask rgba-gradient align-items-center">
+            <!-- Content -->
+            <div class="container px-md-3 px-sm-0">
+              <!--Grid row-->
+              <div class="row wow fadeIn">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+                  <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">
+                    <p>Hello {{user.firstname}}</p>
+                    </h3>
+                  <hr class="hr-light my-4 w-75">
+                  <h4 class="subtext-header mt-2 mb-4">Welcome to the Reem Reimbursement Home Page</h4>
+                  <hr class="hr-light my-4 w-75">
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Content -->
+          </div>
+          <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+            <h4 class="subtext-header mt-2 mb-4">Account Information: </h4>     
+          </div>
+   <div class="container">       
+    <h6>Id: {{user.user_id}}</h6>
+</div>
+<div class="container">       
+  <h6>Username: {{user.username}}</h6>
+</div>
+<div class="container">
+    <h6>First Name: {{user.firstname}}</h6>
+</div>
+<div class="container">
+    <h6>Last Name: {{user.lastname}}</h6>
+</div>
+<div class="container">
+    <h6>E-mail: {{user.email}}</h6>
+</div>
+<div class="container">
+    <h6>Role: {{user.role_id}}</h6>
+    </div>
+</div>
+</body>

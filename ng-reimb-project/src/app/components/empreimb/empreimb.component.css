@@ -1,0 +1,27 @@
+table{
+ 
+    left: 2vw;
+}
+
+#submitbtn{
+    position: absolute;
+    right: 10vw;
+}
+
+#addReimbbtn{
+
+    position: absolute;
+    margin-top: 2em;
+    right: 9vw;
+}
+
+#reimbForm{
+    position: absolute;
+    width: 100vw;
+    left: 2em;
+    margin-top: 5em;
+}
+#back{
+    background-color: gray;
+    width: 80px;
+}

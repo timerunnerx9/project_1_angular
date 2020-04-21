@@ -1,0 +1,43 @@
+body{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  
+#heading1{
+    width: 7em;
+    font-size: 50px;
+    font-weight:bold;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    top: 20%;
+    right: 12%;
+    align-items: center;
+    
+}
+#login{
+    width: 17em;
+    position: relative;
+    margin-top: 10%;
+    left: 37%;
+    align-items: center;
+  
+}
+#errormessage{
+    width: 25em;
+    position: relative;
+    margin-top: 10%;
+    right: 22%;
+    color: red;
+
+
+    align-items: center;
+}
+
+
+

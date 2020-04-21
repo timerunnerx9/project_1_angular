@@ -1,0 +1,81 @@
+    <title>Reimbursement</title>
+    <h3> Reimbursement History</h3>
+    <button (click)="onBack()"type="button" class="btn btn-primary" id="back">Back</button>
+
+    <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Author ID</th>
+          <th scope="col">Submitted Time</th>
+          <th scope="col" width = "18%" >Description</th>
+          <th scope="col">Receipt</th>
+          <th scope="col">Status</th>
+          <th scope="col">Resolver ID</th>
+          <th scope="col">Resolved Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let reimb of reimbrecords">
+          <th scope="row">{{reimb.reimb_id}}</th>
+          <td>{{reimb.reimb_type_id}}</td>
+          <td>{{reimb.reimb_amount}}</td>
+          <td>{{reimb.reimb_author}}</td>
+          <td>{{reimb.reimb_submitted}}</td>
+          <td>{{reimb.reimb_description}}</td>
+          <td>{{reimb.reimb_receipt}}</td>
+          <td>{{reimb.reimb_status_id}}</td>
+          <td>{{reimb.reimb_resolver}}</td>
+          <td>{{reimb.reimb_resolved}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+    <p>
+      <button id= "addReimbbtn" class="btn btn-primary" type="button" data-toggle="collapse" href="#reimbForm" aria-expanded="false" aria-controls="collapseExample">
+        Add Reimbursement Request
+      </button>
+    </p>
+    <div class="collapse" id="reimbForm">
+    <form (ngSubmit)='onSubmit()' #f2="ngForm">
+      <div class="form-row"  >
+        <div class="form-group col-md-2">
+          <label for="reimbType">Types</label>
+          <select id="reimbType" (change)="dropDownHandler1($event)" class="form-control">
+            <option  selected >Choose...</option>
+            <option value = 1>Lodging</option>
+            <option value = 2>Travel</option>
+            <option value = 3>Food</option>
+            <option value = 4>Other</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="reimbAmount">Amount</label>
+          <input type="number" class="form-control" id="reimbAmount"  ngModel name ='reimbAmount' required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="reimbDescription">Description</label>
+          <input type="text" class="form-control" id="reimbDescription" ngModel name = 'reimbDescription' required>
+        </div>
+        <div class="form-group col-md-1.5">
+          <label for="hasreceipt">Has Receipt</label>
+          <select id="hasreceipt" (change)="dropDownHandler2($event)" class="form-control">
+            <option  selected >Choose...</option>
+            <option value = true>Yes</option>
+            <option value = false>No</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
+    </form>
+    </div>
+   
+
+
+
+        
